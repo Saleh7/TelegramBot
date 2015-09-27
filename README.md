@@ -25,7 +25,7 @@ $TextMsg = "Hello world";
 $BotNow ->SendMessage($ChatId,$TextMsg); // Success!
 ```
 
-## Class Function List
+## ClassTelegram.php Function List 
 
 * `Request()`
 * `RequestFile()`
