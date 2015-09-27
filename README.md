@@ -27,9 +27,20 @@ $BotNow ->SendMessage($ChatId,$TextMsg); // Success!
 
 ## Class Function List
 
-* `SendApiBot()`
-* `SendQueries()`
-* `Status()`
+* `Request()`
+* `RequestFile()`
 * `GetUpdates()`
+* `SetWebhook()`
+* `getMe()`
 * `SendMessage()`
-* `GetUserProfilePhoto()`
+* `ForwardMessage()`
+* `SendPhoto()`
+* `SendAudio()`
+* `SendDocument()`
+* `SendSticker()`
+* `SendVideo()`
+* `SendVoice()`
+* `SendLocation()`
+* `SendChatAction()`
+* `GetUserPhotos()`
+* `GetFile()`
