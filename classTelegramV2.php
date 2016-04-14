@@ -1,7 +1,6 @@
 <?php
 
 class TelegramBotV2{
-	
     /**
      * Token API telegram
      * @example https://core.telegram.org/bots/api
@@ -58,9 +57,9 @@ class TelegramBotV2{
     /**
      * @param int|String  chat_id
      * @param string      text
-     * @param string   		parse_mode
+     * @param string   	  parse_mode
      * @param bool        disable_web_page_preview
-     * @param bool  			disable_notification
+     * @param bool  	  disable_notification
      * @param int         reply_to_message_id
      * @param string      reply_markup
      * @link https://core.telegram.org/bots/api#sendmessage
@@ -81,7 +80,7 @@ class TelegramBotV2{
     /**
      * @param int|String  chat_id
      * @param int         from_chat_id
-     * @param bool     		disable_notification
+     * @param bool     	  disable_notification
      * @param bool        message_id
      * @link https://core.telegram.org/bots/api#forwardmessage
      * Use this method to send text messages. On success, the sent Message is returned.
@@ -91,7 +90,7 @@ class TelegramBotV2{
     public function forwardMessage($chat_id, $from_chat_id, $notification =false, $message_id){
         $data["chat_id"] = $chat_id;
         $data["from_chat_id"] = $from_chat_id;
-				$data["disable_notification"] = $notification;
+        $data["disable_notification"] = $notification;
         $data["message_id"] = $message_id;
         return $this->Request("forwardMessage", $data);
     }
@@ -99,8 +98,8 @@ class TelegramBotV2{
     /**
      * @param int|String  chat_id
      * @param string      photo
-     * @param string   		caption
-     * @param bool  			disable_notification
+     * @param string   	  caption
+     * @param bool  	  disable_notification
      * @param int         reply_to_message_id
      * @param string      reply_markup
      * @link https://core.telegram.org/bots/api#sendphoto
@@ -120,10 +119,10 @@ class TelegramBotV2{
     /**
      * @param int|String  chat_id
      * @param string      audio
-     * @param int     		duration
-     * @param string     	performer
-     * @param string     	title
-     * @param bool  			disable_notification
+     * @param int         duration
+     * @param string      performer
+     * @param string      title
+     * @param bool  	  disable_notification
      * @param int         reply_to_message_id
      * @param string      reply_markup
      * @link https://core.telegram.org/bots/api#sendaudio
@@ -145,8 +144,8 @@ class TelegramBotV2{
     /**
      * @param int|String  chat_id
      * @param string      document
-     * @param string     	caption
-     * @param bool  			disable_notification
+     * @param string      caption
+     * @param bool  	  disable_notification
      * @param int         reply_to_message_id
      * @param string      reply_markup
      * @link https://core.telegram.org/bots/api#senddocument
@@ -166,7 +165,7 @@ class TelegramBotV2{
     /**
      * @param int|String  chat_id
      * @param string      sticker
-     * @param bool  			disable_notification
+     * @param bool  	  disable_notification
      * @param int         reply_to_message_id
      * @param string      reply_markup
      * @link https://core.telegram.org/bots/api#sendsticker
@@ -185,11 +184,11 @@ class TelegramBotV2{
     /**
      * @param int|String  chat_id
      * @param string      video
-     * @param int     		duration
-     * @param int     		width
-     * @param int     		height
-     * @param string     	caption
-     * @param bool  			disable_notification
+     * @param int     	  duration
+     * @param int     	  width
+     * @param int     	  height
+     * @param string      caption
+     * @param bool  	  disable_notification
      * @param int         reply_to_message_id
      * @param string      reply_markup
      * @link https://core.telegram.org/bots/api#sendvideo
@@ -212,8 +211,8 @@ class TelegramBotV2{
     /**
      * @param int|String  chat_id
      * @param string      voice
-     * @param int     		duration
-     * @param bool  			disable_notification
+     * @param int     	  duration
+     * @param bool  	  disable_notification
      * @param int         reply_to_message_id
      * @param string      reply_markup
      * @link https://core.telegram.org/bots/api#sendvoice
@@ -234,7 +233,7 @@ class TelegramBotV2{
      * @param int|String  chat_id
      * @param float       latitude
      * @param float       longitude
-     * @param bool  			disable_notification
+     * @param bool  	  disable_notification
      * @param int         reply_to_message_id
      * @param string      reply_markup
      * @link https://core.telegram.org/bots/api#sendlocation
@@ -258,7 +257,7 @@ class TelegramBotV2{
      * @param string      title
      * @param string      address
      * @param string      foursquare_id
-     * @param bool  			disable_notification
+     * @param bool  	  disable_notification
      * @param int         reply_to_message_id
      * @param string      reply_markup
      * @link https://core.telegram.org/bots/api#sendvenue
@@ -283,7 +282,7 @@ class TelegramBotV2{
      * @param string      phone_number
      * @param string      first_name
      * @param string      last_name
-     * @param bool  			disable_notification
+     * @param bool  	  disable_notification
      * @param int         reply_to_message_id
      * @param string      reply_markup
      * @link https://core.telegram.org/bots/api#sendcontact
@@ -295,7 +294,7 @@ class TelegramBotV2{
         $data["phone_number"]= $phone_number;
         $data["first_name"] = $first_name;
         $data["last_name"] = $last_name;
-				$data["disable_notification"] = $notification;
+        $data["disable_notification"] = $notification;
         $data["reply_to_message_id"] = $reply_to_message_id;
         $data["reply_markup"] = $reply_markup;
         return $this->Request("sendContact", $data);
@@ -315,7 +314,7 @@ class TelegramBotV2{
     }
 
     /**
-     * @param int		user_id
+     * @param int   user_id
      * @param int   offset
      * @param int   limit
      * @link https://core.telegram.org/bots/api#getuserprofilephotos
@@ -330,7 +329,7 @@ class TelegramBotV2{
     }
 
     /**
-     * @param int		chat_id
+     * @param int   chat_id
      * @param int   user_id
      * @link https://core.telegram.org/bots/api#kickchatmember
      * Use this method to kick a user from a group or a supergroup.
@@ -343,7 +342,7 @@ class TelegramBotV2{
     }
 
     /**
-     * @param int		chat_id
+     * @param int   chat_id
      * @param int   user_id
      * @link https://core.telegram.org/bots/api#unbanchatmember
      * Use this method to unban a previously kicked user in a supergroup.
@@ -356,7 +355,7 @@ class TelegramBotV2{
     }
 
     /**
-     * @param String	 callback_query_id
+     * @param String   callback_query_id
      * @param String   text
      * @param bool     show_alert
      * @link https://core.telegram.org/bots/api#answercallbackquery
@@ -375,8 +374,8 @@ class TelegramBotV2{
      * @param int         message_id
      * @param string      inline_message_id
      * @param string      text
-     * @param string  		parse_mode
-     * @param bool  			disable_web_page_preview
+     * @param string  	  parse_mode
+     * @param bool  	  disable_web_page_preview
      * @param string      reply_markup
      * @link https://core.telegram.org/bots/api#editmessagetext
      * Use this method to edit text messages sent by the bot or via the bot (for inline bots).
@@ -391,7 +390,7 @@ class TelegramBotV2{
         $data["disable_web_page_preview"] = $web_page;
         $data["reply_markup"] = $reply_markup;
         return $this->Request("editMessageText", $data);
-    }
+     }
 
     /**
      * @param int|String  chat_id
@@ -422,8 +421,8 @@ class TelegramBotV2{
      * @return Response
     */
     public function editMessageReplyMarkup($chat_id, $message_id, $inline_message, $reply_markup = null){
-        $data["chat_id"] = $chat_id;
-        $data["message_id"] = $message_id;
+        $data["chat_id"]= $chat_id;
+        $data["message_id"]= $message_id;
         $data["inline_message_id"] = $inline_message;
         $data["reply_markup"] = $reply_markup;
         return $this->Request("editMessageReplyMarkup", $data);
@@ -436,7 +435,7 @@ class TelegramBotV2{
      * @return File
     */
     public function getFile($file_id){
-        $data["file_id"] = $file_id;
+        $data["file_id"]= $file_id;
         return $this->Request("getFile", $data);
     }
 
